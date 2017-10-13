@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Ask Questions</title>
+          <link rel="stylesheet" type="text/css" href="contactus.css"> 
+          <link rel="stylesheet" type="text/css" href="heading.css">
+		   <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+	
+    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB2xzuct3Pdt-y82llh-rO9P2OECsPbiHg",
+            authDomain: "demo1-25.firebaseapp.com",
+            databaseURL: "https://demo1-25.firebaseio.com",
+            projectId: "demo1-25",
+            storageBucket: "demo1-25.appspot.com",
+            messagingSenderId: "1014050920298"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+    <script src = "askq.js"></script>
+        
+	<center>
+       <form method="post" action="index.html">
+                        <nav id="menu">
+                            <center>    <ul>
+                <li><a href="index.html" >HOME</a></li>
+
+                <li><a href="takequiz.html" >TAKE QUIZ</a></li>
+                                <li><a href="askq.html" >ASK QUES</a></li>
+
+                 <li><a href="contactus.html" >CONTACT US</a></li>
+                                   <li><a href="createquiz.html" >MAKE QUIZ</a></li>
+
+                   <li><a href="registration.html" >REGISTRATION</a></li>
+                                    <div class="current">
+                                        <div class="ctoparr"></div>
+                                        <div class="cback"></div>
+                                        <div class="cbotarr"></div>
+                                    </div>
+
+                            </ul></center></nav>
+
+                        </nav>
+                    </div><br>
+                
+       </form></center>
+		
+         <div class="heading"> <center> <h1>Have any Questions Ask here</h1></center></div>
+        <form><center>
+            <div class="form-style-10">
+            <div class="inner-wrap">
+                <h1>Ask Questions</h1>
+                <label>Name</label>   <input type="text" id="field1" size="30px" /><br>
+                <label>E-mail</label>   <input type="email" id="field2" size="30px" /><br>
+     <label>Question</label><textarea name="question" rows="7" cols="52.4" id="field3">
+     </textarea><br><br>
+     <center>  <input type="submit" name="submit" size="10px" onclick="askquestion()"/></center>
+            </div></div></center>
+        </form>
+    </body>
+</html>

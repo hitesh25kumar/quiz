@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Home Page</title>
+        <link rel=stylesheet href="style.css">
+    </head>
+
+<body>
+<form method="post" action="index.html">
+    <nav id="menu">
+        <center>    <ul>
+            <li><a href="index.html" >HOME</a></li>
+
+            <li><a href="takequiz.html" >TAKE QUIZ</a></li>
+            <li><a href="askq.html" >ASK QUES</a></li>
+
+            <li><a href="contactus.html" >CONTACT US</a></li>
+            <li><a href="createquiz.html" >MAKE QUIZ</a></li>
+
+            <li><a href="registration.html" >REGISTRATION</a></li>
+            <div class="current">
+                <div class="ctoparr"></div>
+                <div class="cback"></div>
+                <div class="cbotarr"></div>
+            </div>
+
+        </ul></center></nav>
+
+    </nav>
+    </div><br>
+</form>
+
+
+<h1><center>Welcome to QuizMaster</center></h1>
+<div id="firebaseui-auth-container"></div>
+
+<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase-messaging.js"></script>
+
+<script src="firebasecon.js"></script>
+
+<script src="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.css" />
+<script type="text/javascript">
+    // FirebaseUI config.
+    var uiConfig = {
+        signInSuccessUrl: 'createquiz.html',
+        signInOptions: [
+            // Leave the lines as is for the providers you want to offer your users.
+            firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+            firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+            firebase.auth.GithubAuthProvider.PROVIDER_ID,
+            firebase.auth.EmailAuthProvider.PROVIDER_ID
+
+
+
+        ],
+        // Terms of service url.
+        tosUrl: '<your-tos-url>'
+    };
+    // Initialize the FirebaseUI Widget using Firebase.
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+    // The start method will wait until the DOM is loaded.
+    ui.start('#firebaseui-auth-container', uiConfig);
+</script>
+</body>
+</html>
